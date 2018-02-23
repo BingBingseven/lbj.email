@@ -1,0 +1,23 @@
+.left-bar,.header-bar,.right-bar{
+    background: #f6f5f6;
+    border:2px solid #ccc;
+}
+.left-bar{
+        width:15%;
+        height:600px;
+        float:left;
+        text-align: center;
+    }
+.left-bar p{
+        margin-top:10px;
+}
+.right-bar{
+    width:83%;
+    height:600px;
+    float:left;
+    margin-left: 5px;
+}
+.header-bar{
+        height:80px;
+        margin-bottom: 5px;
+    }  
