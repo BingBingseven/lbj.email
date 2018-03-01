@@ -5,19 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="author" content="李冰洁">
         <title>lbj.email</title>
-        <link href="./css/reset.css" rel="stylesheet">
-        <link href="./css/common.css" rel="stylesheet">
-
+        <!--<link href="./css/reset.css" rel="stylesheet">-->
+        <!--<link href="./css/common.css" rel="stylesheet">-->
+        <link href="./static/bootstrap.min.css" rel="stylesheet">
+        <script src="./static/angular.min.js"></script>
         <script src="./static/angular.min.js"></script>
         <script src="./static/angular-ui-router.js"></script>
-        <script src="./js/commonJS.js"></script>
-        <script src="./js/routerConfig.js"></script>
+        <script src="./static/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/routers.js"></script>
+        <script src="./js/controllers.js"></script>
+        <script src="./js/directives.js"></script>
+        <script src="./js/services.js"></script>
     </head>
     <body ng-app="myPro">
         
-        <div ui-view="header"></div>
-        <div ui-view="nav" class="left-bar"></div>
-        <div ui-view="contents" class="right-bar"></div>
+        <div ui-view></div>
         
     </body>
 </html>

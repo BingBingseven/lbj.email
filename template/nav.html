@@ -1,8 +1,19 @@
-
-<div>
-    <div>
-        <p><a ui-sref="inbox">收件箱</a></p>
-        <p><a ui-sref="outbox">发件箱</a></p>
-    </div>
-    
+<style>
+.left-bar{
+    border-radius:5px;
+    border:1px solid #fff;
+    height:600px;
+    text-align: center;
+}
+.left-bar p{
+        margin-top:10px;
+}
+</style>
+<div class="left-bar">
+    <ul class="nav nav-pills nav-stacked"> 
+        <!--增加ng-repeat指令-->
+        <li role="presentation" class="active"><a ui-sref="home.write" ng-click="changeColor()">写信</a></li>
+        <li role="presentation"><a ui-sref="home.inbox" ng-click="changeColor()">收件箱</a></li>
+        <li role="presentation" ><a ui-sref="home.outbox" ng-click="changeColor()">发件箱</a></li>
+    </ul>
 </div>

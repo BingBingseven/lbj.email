@@ -1,0 +1,59 @@
+
+app.config(function($stateProvider){
+    $stateProvider
+    .state('home',{
+        url:'/',
+         views:{
+             '':{
+                templateUrl:'template/home.html'
+             },
+            'contents@home':{
+                templateUrl:'template/adv.html'
+            }
+        }
+    })
+    .state('home.inbox',{
+        url:'^/inbox',
+        views:{
+            'contents':{
+                templateUrl:'template/inboxPage.html'
+            }
+        }
+    })
+    .state('home.outbox',{
+        url:'^/outbox',
+        views:{
+            'contents':{
+                templateUrl:'template/outboxPage.html'
+            }
+        }
+    })
+    .state('home.letterA',{
+        url:'^/letterA',
+        views:{
+            'contents':{
+                templateUrl:'template/letterA.html'
+            }
+        }
+    })
+     .state('home.letterB',{
+        url:'^/letterB',
+        views:{
+            'contents':{
+                templateUrl:'template/letterB.html'
+            }
+        }
+    })
+    .state('home.write',{
+        url:'^/write',
+        views:{
+            'contents':{
+                templateUrl:'template/write.html',
+                controller:'writeController'
+            }
+        }
+    })
+});
+app.run(function($state){
+    $state.go('home');
+});
