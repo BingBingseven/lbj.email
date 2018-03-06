@@ -1,5 +1,23 @@
-<div>
-    hi this is inbox page
-    <p><a ui-sref="home.letterA">letterA</a></p>
-    <p><a ui-sref="home.letterB">letterB</a></p>
+<style>
+    .bg_white{
+        background: #fff;
+        border-left:2px solid #1078b0;
+        height:596px;
+        border-radius:5px;
+    }
+    .checkbox{
+        border-bottom:1px solid #ddd;
+    }
+</style>
+
+<div class="col-lg-3 col-md-3 col-xs-3" ng-controller="inboxListController">
+    <div class="checkbox" ng-repeat="letter in inbox">
+         <label>
+             <input type="checkbox" value="">
+              <a ui-sref="home.inbox.letter({letterId:$index})">{{letter.addresser}}: {{letter.theme}}</a>
+         </label>
+         <p>{{letter.date}}</p>
+    </div>
 </div>
+<div class="col-lg-9 col-md-9 col-xs-9 bg_white" ui-view="letterContent"></div>
+

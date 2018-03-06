@@ -1,0 +1,23 @@
+<style>
+    .panel{
+        margin-top:10px;
+    }
+    button.btn{
+        text-align: right;
+    }
+</style>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+        <div>发自：{{currentLetter.addresser}}</div>
+        <h5>时间： {{currentLetter.date}}</h5>
+    </h3>
+  </div>
+  <div class="panel-body">
+      <h5>正文：</h5>
+      {{currentLetter.content}}
+  </div>
+  <div class="panel-footer">
+      <button class="btn btn-primary">回复</button>
+      <button class="btn btn-danger">删除</button>
+</div>

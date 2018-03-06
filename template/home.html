@@ -3,19 +3,21 @@
     border-radius:5px;
     border:2px solid #1078B0;
     height:600px;
-    background: #eee;
-    padding-top:10px;
+    background: #f5f5f5;
+    padding: 0;
 }
 .row>div{
-    padding: 0;
+    margin: 0;
 }
 </style>
 <div  class="container">
     <div class="row">
-        <div class="col-lg-12" ng-include="'template/header.html'"></div>
+        <div class="col-lg-12 header-bar bg-primary" ng-include="'template/header.html'"></div>
     </div>
     <div class="row">
-        <div class="col-lg-2 col-md-2 col-xs-2"  ng-include="'template/nav.html'" ng-controller="navController"></div>
-        <div class="col-lg-10 col-md-10 col-xs-10" ui-view="contents" id="right-bar"></div>
+        <div class="col-lg-2 col-md-2 col-xs-2 nav"  ng-include="'template/nav.html'" ng-controller="navController"></div>
+        <div class="col-lg-10 col-md-10 col-xs-10 row" ui-view="contents" id="right-bar">
+            
+        </div>
     </div>
 </div>

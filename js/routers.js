@@ -8,7 +8,7 @@ app.config(function($stateProvider){
                 templateUrl:'template/home.html'
              },
             'contents@home':{
-                templateUrl:'template/adv.html'
+                template:'<p>这是广告</p>'
             }
         }
     })
@@ -20,6 +20,15 @@ app.config(function($stateProvider){
             }
         }
     })
+    .state('home.inbox.letter',{
+            url:"/:letterId",
+            views:{
+                'letterContent':{
+                    templateUrl:'template/letterContent.html',
+                    controller:'contentController'
+                }
+            }
+    })
     .state('home.outbox',{
         url:'^/outbox',
         views:{
@@ -28,27 +37,11 @@ app.config(function($stateProvider){
             }
         }
     })
-    .state('home.letterA',{
-        url:'^/letterA',
+    .state('home.writePage',{
+        url:'^/writePage',
         views:{
             'contents':{
-                templateUrl:'template/letterA.html'
-            }
-        }
-    })
-     .state('home.letterB',{
-        url:'^/letterB',
-        views:{
-            'contents':{
-                templateUrl:'template/letterB.html'
-            }
-        }
-    })
-    .state('home.write',{
-        url:'^/write',
-        views:{
-            'contents':{
-                templateUrl:'template/write.html',
+                templateUrl:'template/writePage.html',
                 controller:'writeController'
             }
         }
